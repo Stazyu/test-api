@@ -2,7 +2,7 @@ const express = require('express');
 const brainly = require('./brainly');
 const instagramFetcher = require('./instagram');
 const app = express()
-const port = 5000;
+const port = process.env.PORT || 5000;
 const { yt1s } = require('./ytdl')
 
 app.get('/', (req, res) => res.send('Hello World!'))
