@@ -31,7 +31,7 @@ app.get('/brainly', async (req, res) => {
     } catch (err) {
         res.send({
             result: null,
-            err: err
+            err: err.message
         }).status(404);
     }
 })
