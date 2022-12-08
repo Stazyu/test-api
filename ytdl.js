@@ -95,7 +95,7 @@ const convertLink = async (k, vid) => {
     return new Promise((resolve, reject) => {
         axios.post('https://yt1s.com/api/ajaxConvert/convert', new URLSearchParams({ k, vid }))
             .then((res) => {
-                resolve(res.data);
+                resolve(res.data.dlink);
             }).catch((err) => {
                 reject(err);
             });
